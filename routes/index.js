@@ -229,13 +229,13 @@ header = {
   Authorization: "Basic " + process.env.Elastic_Auth_Token,
 };
 const client = new Client({
-  node: "https://elasticsearch.kasadara.kasadara.use1.k8g8.com/"
+  node: "http://122.165.56.243:9200/"
 });
 /* GET home page. */
 app.get("/", async function (req, res, next) {
   res.status(200).json({
     Title: "Size Corner",
-    name: "https://elasticsearch.kasadara.kasadara.use1.k8g8.com/",
+    name: "http://122.165.56.243:9200/",
   });
 });
 app.get("/gethealth", (req, res) => {
